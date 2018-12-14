@@ -43,7 +43,6 @@ int main(void) {
 				rewind(stdin);
 
 				if(list == NULL) {
-					printf("hello world\n");
 					list = (NODE *)malloc(sizeof(NODE));
 					strcpy(list->movie.title, movie.title);
 					list->movie.release = movie.release;
@@ -74,7 +73,7 @@ int main(void) {
 
 	}
 
-	while(!list) {
+	while(list) {
 		temp = list;
 		list = list->link;
 		free(temp);
